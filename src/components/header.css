@@ -1,0 +1,44 @@
+/* Header Styles */
+
+header {
+    background-color: #643636; /* Change to your desired background color */
+    padding: 20px 0; /* Adjust as needed */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto;
+  }
+  
+  .logo img {
+    height: 50px; /* Adjust logo height as needed */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin-right: 20px; /* Adjust spacing between nav links as needed */
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0; /* Remove margin from last nav link */
+  }
+  
+  .nav-links a {
+    color: #fff; /* Change link color as needed */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700; /* Change link color on hover */
+  }
+  
