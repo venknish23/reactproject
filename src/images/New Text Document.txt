@@ -1,0 +1,5 @@
+Explanation: The Header component now accepts links as props. This prop is an array of link objects, allowing for dynamic rendering of navigation links. Each link object contains url and label, making the header adaptable to various contexts by simply passing different arrays of links.
+
+The Footer component accepts contactInfo as props, which includes linkedin, linkedinProfile, address, and phone. This makes the footer's content dynamic, allowing external control over what information is displayed, facilitating easy updates and reusability.
+
+useState is used here to manage the state of blogPosts. The headerLinks and footerContactInfo are passed as props to the Header and Footer components, respectively. This usage not only makes the code cleaner and more modular but also demonstrates an important React principle of lifting state up and passing it down via props, making components more testable and reusable.

@@ -1,55 +1,61 @@
-/* App.css */
-
 body, html {
-  font-family: Arial, sans-serif; /* Sets the font for the whole page */
-  margin: 0; /* Removes the margin around the edges */
-  padding: 0; /* Removes the padding around the edges */
-  background-color: #f9f9f9; /* Sets the background color to a light gray */
-  color: #333; /* Sets the text color to dark gray */
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0;
+  background-color: #f9f9f9; 
+  color: #333; 
 }
 
 .top-bar {
-  display: flex; /* Uses Flexbox for layout */
-  justify-content: space-between; /* Distributes space between the logo and navigation links */
-  align-items: center; /* Aligns items vertically in the center */
-  background-color: #007bff; /* Sets a blue background color */
-  color: white; /* Sets the text color to white */
-  padding: 10px 20px; /* Adds padding inside the top bar */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 20px; 
 }
 
 .top-bar .logo {
-  width: 150px; /* Sets the width of the logo */
-  height: 50px; /* Sets the height of the logo */
+  width: 150px;
+  height: 50px; 
 }
 
 nav a {
-  color: white; /* Sets the navigation link color to white */
-  text-decoration: none; /* Removes underline from links */
-  padding: 0 10px; /* Adds horizontal padding to links */
+  color: white; 
+  text-decoration: none; 
+  padding: 0 10px;
 }
 
 nav a:hover {
-  text-decoration: underline; /* Adds underline to links on hover */
+  text-decoration: underline; 
 }
 
 main {
-  display: flex; /* Uses Flexbox for layout */
-  align-items: start; /* Aligns items horizontally in the center */
-  padding: 20px; /* Adds padding inside the main area */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  padding: 20px;
+  justify-content: space-between;
 }
 
 article {
-  width: 80%; /* Sets the width of each article to 80% of its parent container */
-  background-color: white; /* Sets the background color of articles to white */
-  padding: 20px; /* Adds padding inside each article */
-  margin-bottom: 20px; /* Adds a bottom margin to each article */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow around each article */
-  border-radius: 5px; /* Rounds the corners of the articles */
+  flex: 1 1 45%; /* Adjusting to take exactly 45% with automatic margin */
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-right: 4%; /* Right margin for spacing */
+}
+
+article:nth-child(2n) {
+  margin-right: 0; /* Removes margin from every second item */
 }
 
 img {
-  max-width: 100%; /* Ensures the image is never wider than the article */
-  height: auto; /* Maintains the aspect ratio of the image */
-  display: block; /* Ensures the image is on its own line */
-  margin-bottom: 10px; /* Adds space below the image */
+  width: 100%; /* Ensures the image fills the width of its container */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }

@@ -1,55 +1,76 @@
-import React, { Component } from 'react';
-import './App.css'; 
+import React, { useState } from 'react';
+import './App.css';
+import Header from './components/header';
+import Footer from './components/Footer';
+import tigerimg from './images/tiger.jpg';
+import parrotimg from './images/Macaw.jpg';
+import MountainG from './images/gorrila.jpg';
+import Seaimg from './images/sea.jpg';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      blogPosts: [
-        {
-          title: 'The Majestic Tigers of Siberia',
-          date: 'June 1, 2024',
-          author: 'Smit paul',
-          imageUrl: 'https://cms.bbcearth.com/sites/default/files/2021-07/Amur%20tiger%20in%20the%20snow_GettyImages-103787456.jpg',
-          description: 'Explore the lives of Siberian tigers and their habitat in the deep forests of Russia.'
-        },
-        {
-          title: 'Birdwatching in the Amazon Rainforest',
-          date: 'May 18, 2024',
-          author: 'Avi S',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmB0zt52oXiyE92MXuYteOj_AlrCxYCezCbg&s',
-          description: 'Discover the vibrant and diverse avian species that inhabit the Amazon Basin.'
-        }
-      ]
-    };
-  }
+function App() {
+  const [blogPosts] = useState([
+    {
+      title: 'The Majestic Tigers of Siberia',
+      date: 'June 1, 2024',
+      author: 'Smit Paul',
+      image: tigerimg,
+      description: 'Explore the lives of Siberian tigers and their habitat in the deep forests of Russia.'
+    },
+    {
+      title: 'Birdwatching in the Amazon Rainforest',
+      date: 'May 18, 2024',
+      author: 'Avi S',
+      image: parrotimg,
+      description: 'Discover the vibrant and diverse avian species that inhabit the Amazon Basin.'
+    },
+    {
+      title: 'The Enigmatic World of Deep Sea Creatures',
+      date: 'June 10, 2024',
+      author: 'Jenny Marine',
+      image: Seaimg,
+      description: 'Delve into the mysteries of deep sea ecosystems and their intriguing inhabitants.'
+    },
+    {
+      title: 'Conservation Efforts for Mountain Gorillas',
+      date: 'June 20, 2024',
+      author: 'Tom Conservator',
+      image: MountainG,
+      description: 'Learn about the critical conservation efforts saving mountain gorillas from extinction.'
+    }
+  ]);
 
-  render() {
-    return (
-      <div className="App">
-        <header className="top-bar">
-          <img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/11/11204740/wildlife-logo-by-mahmoud-elhofy-dribbble.png" alt="Blog Logo" className="logo" />
-          <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-          </nav>
-        </header>
-        <main className='main'>
-          {this.state.blogPosts.map((post, index) => (
-            <article key={index}>
-              <h2>{post.title}</h2>
-              <p><small>Published on {post.date} by {post.author}</small></p>
-              <img src={post.imageUrl} alt={post.title} style={{ width: '100%', height: '300px' }} />
-              <p>{post.description}</p>
-              <hr />
-            </article>
-          ))}
-        </main>
+  const navLinks = [
+    { url: "/", label: "Home" },
+    { url: "/about", label: "About" },
+    { url: "#contact", label: "Contact" }
+  ];
+
+  const footerInfo = {
+    linkedin: "https://www.linkedin.com/in/venkata-nishith-kodi-882242256/",
+    profile: "Your Profile",
+    address: "452 Main Street, Toronto, ON ",
+    phone: "(453) 456-7890"
+  };
+
+  return (
+    <div className="App">
+      <Header links={navLinks} />
+      <main className='main'>
+        {blogPosts.map((post, index) => (
+          <article key={index}>
+            <h2>{post.title}</h2>
+            <p><small>Published on {post.date} by {post.author}</small></p>
+            <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', maxWidth: '600px' }} />
+            <p>{post.description}</p>
+          </article>
+        ))}
+      </main>
+      <div id="contact">
+        
       </div>
-    );
-  }
+      <Footer contact={footerInfo} />
+    </div>
+  );
 }
 
 export default App;

@@ -1,20 +1,20 @@
-/* Header Styles */
+
 
 header {
-    background-color: #643636; /* Change to your desired background color */
-    padding: 20px 0; /* Adjust as needed */
+    background-color: #643636; 
+    padding: 20px 0; 
   }
   
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 1200px; 
     margin: 0 auto;
   }
   
   .logo img {
-    height: 50px; /* Adjust logo height as needed */
+    height: 50px; 
   }
   
   .nav-links {
@@ -25,20 +25,20 @@ header {
   }
   
   .nav-links li {
-    margin-right: 20px; /* Adjust spacing between nav links as needed */
+    margin-right: 20px; 
   }
   
   .nav-links li:last-child {
-    margin-right: 0; /* Remove margin from last nav link */
+    margin-right: 0; 
   }
   
   .nav-links a {
-    color: #fff; /* Change link color as needed */
+    color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .nav-links a:hover {
-    color: #ffd700; /* Change link color on hover */
+    color: #ffd700; 
   }
   
